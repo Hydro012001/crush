@@ -1,21 +1,24 @@
-// import React from "react";
+import React from "react";
 
-// function Feedback(props) {
-//   const texts = ["Text 1", "Text 2", "Text 3", "Text 4"];
+function Feedback({ handleShowMessage }) {
+  return (
+    <div className="message">
+      <h2>Hi Crush,</h2>
+      <p>I want to show this simple cube picture for you.</p>
+      <p>I never thought nga maka tell ko nmo sa akong feelings.</p>
+      <p>And I never expect usab nga naa pd diay kay crush naku.</p>
+      <p>Thank you so much.</p>
+      <p>Keep being pretty. </p>
+      <p>You're admirer.</p>
+      <button
+        type="button"
+        class="btn btn-primary"
+        onClick={() => handleShowMessage()}
+      >
+        Close
+      </button>
+    </div>
+  );
+}
 
-//   return (
-//     <div className="falling-text-container">
-//       {texts.map((text, index) => (
-//         <div
-//           key={index}
-//           className="falling-text"
-//           style={{ animationDelay: `${index * 0.5}s` }}
-//         >
-//           <h1>{text}</h1>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
-
-// export default Feedback;
+export default Feedback;

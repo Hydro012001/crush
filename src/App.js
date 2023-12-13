@@ -2,11 +2,12 @@ import "./App.css";
 import { useEffect, useState } from "react";
 import ToastMsg from "./Components/ToastMsg";
 import MyGif from "./image/wired-lineal-20-love-heart.gif";
+import Feedback from "./Components/Feedback";
 
 function App() {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const [showToast, setShowToast] = useState(true);
-
+  const [showMessae, setShowMessage] = useState(false);
   const handleMouseMove = (event) => {
     const { clientX, clientY } = event;
     const { left, top, width, height } =
@@ -32,12 +33,17 @@ function App() {
     if (rotation.x === 0 && rotation.y === 0) {
       alert("Please hover first the images.");
     } else {
+      handleShowMessage();
     }
+  };
+
+  const handleShowMessage = () => {
+    setShowMessage(!showMessae);
   };
   return (
     <div className="contianer">
+      {showMessae ? <Feedback handleShowMessage={handleShowMessage} /> : ""}
       <div className="App">
-        {" "}
         {showToast ? (
           <ToastMsg />
         ) : (
