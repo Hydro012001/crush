@@ -1,0 +1,84 @@
+.contianer {
+  position: relative;
+  height: 100vh;
+  background-color: rgb(5, 4, 4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.cube {
+  width: 300px; /* Adjust the width */
+  height: 300px; /* Adjust the height */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.face {
+  position: absolute;
+  width: 300px; /* Adjust the width */
+  height: 300px; /* Adjust the height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+  background-color: #3498db;
+  border: 1px solid #ccc;
+}
+
+.front {
+  transform: translateZ(150px);
+  background-image: url("./image/front.jpg");
+  background-size: contain;
+}
+.back {
+  transform: rotateY(180deg) translateZ(150px);
+  background-image: url("./image/back.jpg");
+  background-size: contain;
+}
+.left {
+  transform: rotateY(-90deg) translateZ(150px);
+  background-image: url("./image/left.jpg");
+  background-size: contain;
+}
+.right {
+  transform: rotateY(90deg) translateZ(150px);
+  background-image: url("./image/right.jpg");
+  background-size: contain;
+}
+.top {
+  transform: rotateX(90deg) translateZ(150px);
+  background-image: url("./image/top.jpg");
+  background-size: contain;
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(150px);
+  background-image: url("./image/bottom.jpg");
+  background-size: contain;
+}
+
+.toastmsg {
+  background-color: #fff;
+
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 1rem;
+  border-left: 10px solid green;
+  border-top-right-radius: 10px;
+}
+.gif {
+  height: 5rem;
+  height: 5rem;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
