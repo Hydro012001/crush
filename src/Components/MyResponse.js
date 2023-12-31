@@ -13,7 +13,7 @@ function MyResponse({ agree, handleClose }) {
         message: response,
         agree: agree,
       }).then((res) => {
-        navigate("/letter");
+        handleHide();
       });
     } catch (error) {
       console.log(error);
