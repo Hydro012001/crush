@@ -7,14 +7,14 @@ function MyResponse({ agree, handleClose }) {
   const [response, setResponse] = useState("");
   const navigate = useNavigate();
   const handleSubmitResponse = async () => {
-    console.log(agree);
     try {
       await addDoc(collection(db, "response"), {
         message: response,
         agree: agree,
       }).then((res) => {
-        handleHide();
+        navigate("/slider");
       });
+      navigate("/slider");
     } catch (error) {
       console.log(error);
     }
