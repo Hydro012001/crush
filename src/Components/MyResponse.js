@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "./Firebase";
-function MyResponse({ agree }) {
+function MyResponse({ agree, handleClose }) {
   const [response, setResponse] = useState("");
 
   const handleSubmitResponse = async () => {
@@ -18,6 +18,9 @@ function MyResponse({ agree }) {
       console.log(error);
     }
   };
+  const handleHide = () => {
+    handleClose();
+  };
 
   return (
     <div className="container-response">
@@ -31,9 +34,15 @@ function MyResponse({ agree }) {
             onChange={(e) => setResponse(e.target.value)}
           ></textarea>
         </div>
-        <button className="btns only" onClick={handleSubmitResponse}>
-          Submit
-        </button>
+        <div className="btns-container">
+          {" "}
+          <button className="btns only" onClick={handleSubmitResponse}>
+            Submit
+          </button>
+          <button className="btns other" onClick={handleHide}>
+            Close
+          </button>
+        </div>
       </div>
     </div>
   );

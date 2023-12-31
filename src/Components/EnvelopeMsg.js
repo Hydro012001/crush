@@ -10,12 +10,19 @@ function EnvelopeMsg() {
     setFlapOpen(!isFlapOpen);
   };
   const handleShowResponse = (agree) => {
-    setShowResponse(!showResponse);
     setAgree(agree);
+    handleClose();
+  };
+  const handleClose = () => {
+    setShowResponse(!showResponse);
   };
   return (
     <>
-      {showResponse ? <MyResponse agree={agree} /> : ""}
+      {showResponse ? (
+        <MyResponse agree={agree} handleClose={handleClose} />
+      ) : (
+        ""
+      )}
       <div className="body-envelope">
         <div className={`container `}>
           <div className={`envelope-wrapper ${isFlapOpen ? "flap" : ""}`}>
@@ -30,10 +37,10 @@ function EnvelopeMsg() {
                     <p>
                       Happy New Year, I pray that this year will be your years
                       of fulfilment. I hope you will achieve you dreams in life.
-                      I hope that you will not choose other, but naa man sultie
-                      lang ko daan haha. Pili lang sa ubos if you choose other
-                      or not. And I hope that one day u be comfortable to share
-                      your problems with anyone or to me lang.
+                      I hope that dili ka mangita ug lain, but naa man gani
+                      sultie lang ko daan haha. Pili lang sa ubos if you choose
+                      other or not. And I hope that one day u be comfortable to
+                      share your problems with anyone or to me lang.
                     </p>
                     <div className="btn-containers">
                       <button

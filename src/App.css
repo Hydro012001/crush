@@ -165,11 +165,7 @@
   height: 1.5rem;
   width: 1.5rem;
 }
-.rose {
-  position: absolute;
-  bottom: 1rem;
-  filter: drop-shadow(5px 5px 10px #000000);
-}
+
 .response-container {
   width: 50%;
   height: 50vh;
@@ -191,4 +187,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.reveal-gift {
+  width: 20rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: absolute;
+  top: 100px;
+  background-color: #3498db;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+}
+.reveal-gift:hover {
+  background-color: #62a1ca;
+}
+.rose-continer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.rose {
+  filter: drop-shadow(5px 5px 10px #000000);
 }

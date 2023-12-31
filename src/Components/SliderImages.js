@@ -6,6 +6,7 @@ import image9 from "../image/9.jpg";
 import image6 from "../image/6.png";
 import image7 from "../image/7.jpeg";
 import image10 from "../image/10.jpg";
+import gifts from "../image/gifts.gif";
 import "../App.css";
 import rose from "../image/wired-lineal-1845-rose.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,10 +14,11 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 function SliderImages(props) {
   const [slides, setSlides] = useState(0);
-
+  const navigate = useNavigate();
   const data = [
     {
       caption: "Hello testing",
@@ -44,25 +46,11 @@ function SliderImages(props) {
       caption: "Hello testing",
       image: image10,
     },
+    {
+      caption: "Hello testing",
+      image: gifts,
+    },
   ];
-
-  // const data = [
-  //   {
-  //     caption: "Hello testing",
-  //     image:
-  //       "https://www.snexplores.org/wp-content/uploads/2020/04/1030_LL_trees-1028x579.png",
-  //   },
-  //   {
-  //     caption: "Hello testing",
-  //     image:
-  //       "https://res.cloudinary.com/uktv/image/upload/v1375346157/uvqqzh20rqargzgyuqzv.jpg",
-  //   },
-  //   {
-  //     caption: "Hello testing",
-  //     image:
-  //       "https://nckri.org/wp-content/uploads/2021/02/son-doonng-cave-vietnam-biggest-cave-1-1600x900.jpg",
-  //   },
-  // ];
 
   const handleNextSlide = () => {
     setSlides(slides === data.length - 1 ? 0 : slides + 1);
@@ -84,7 +72,28 @@ function SliderImages(props) {
           className={slides === index ? "slides" : "slides-hidden"}
         >
           <img src={item.image} alt="sample" className="images" />
-          <img src={rose} alt="rose" className="gif rose" />
+          <div className="rose-continer">
+            <img src={rose} alt="rose" className="gif rose" />
+            <img src={rose} alt="rose" className="gif rose" />
+            <img src={rose} alt="rose" className="gif rose" />
+            <img src={rose} alt="rose" className="gif rose" />
+            <img src={rose} alt="rose" className="gif rose" />
+            <img src={rose} alt="rose" className="gif rose" />
+            <img src={rose} alt="rose" className="gif rose" />
+          </div>
+          {index === data.length - 1 ? (
+            <button
+              className="reveal-gift"
+              onClick={() => {
+                navigate("/letter");
+              }}
+            >
+              {" "}
+              Click Me To Reveal Your Gift
+            </button>
+          ) : (
+            ""
+          )}
         </div>
       ))}
 
