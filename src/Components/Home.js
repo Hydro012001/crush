@@ -45,6 +45,16 @@ function Home(props) {
   const handleShowMessage = () => {
     setShowMessage(!showMessae);
   };
+
+  const handleGoToSlider = () => {
+    const currentDate = new Date();
+    const newYearDate = new Date("January 1, 2024");
+    if (currentDate.getTime() >= newYearDate.getTime()) {
+      alert("Dili pa pwd lagi...");
+    } else {
+      navigate("slider");
+    }
+  };
   return (
     <div className="contianer">
       {showMessae ? <Feedback handleShowMessage={handleShowMessage} /> : ""}
@@ -57,7 +67,7 @@ function Home(props) {
               src={MyGift}
               className="gif"
               onClick={() => {
-                navigate("slider");
+                handleGoToSlider();
               }}
               alt="..."
             />
