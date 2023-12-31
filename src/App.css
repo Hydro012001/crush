@@ -216,3 +216,16 @@
 .rose {
   filter: drop-shadow(5px 5px 10px #000000);
 }
+.notes {
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 20px;
+}
+.agree-ans {
+  color: green;
+  font-weight: bold;
+}
+.not-ans {
+  color: red;
+  font-weight: bold;
+}

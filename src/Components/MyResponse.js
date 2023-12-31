@@ -27,6 +27,18 @@ function MyResponse({ agree, handleClose }) {
   return (
     <div className="container-response">
       <div className="response-container">
+        <p className="notes">
+          Can you give me your honest response? <br />
+          Why did you choose{" "}
+          {agree === "Agree" ? (
+            <label className="agree-ans">
+              {" "}
+              me instead of choosing the others ?
+            </label>
+          ) : (
+            <label className="not-ans">not choose me ?</label>
+          )}
+        </p>
         <div class="form-floating ">
           <textarea
             class="form-control"
