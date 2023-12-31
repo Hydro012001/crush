@@ -19,7 +19,7 @@
   flex-direction: column;
 }
 .container {
-  margin-top: 18vh;
+  margin-top: 20vh;
   height: 100vh;
   display: flex;
   align-items: flex-end;
@@ -106,7 +106,7 @@ p {
   z-index: 0;
 }
 .flap > .envelope > .letter {
-  bottom: 270px;
+  bottom: 290px;
   transform: scale(1.5);
   transition-delay: 1s;
 }
@@ -173,4 +173,14 @@ p {
 }
 .instruction h2 {
   color: white;
+}
+.emojies {
+  position: absolute;
+  right: 1rem;
+  bottom: 0px;
+}
+.emojies img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
 }
