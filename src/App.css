@@ -77,10 +77,18 @@
 .gif {
   height: 5rem;
   height: 5rem;
+
+  cursor: pointer;
+}
+.gif-contianer {
   position: absolute;
   bottom: 10px;
-  right: 10px;
-  cursor: pointer;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
 }
 .message {
   position: absolute;
@@ -90,4 +98,97 @@
   z-index: 1;
   padding: 1rem;
   border-radius: 1rem;
+}
+
+.pictures {
+  width: 10%;
+  height: 50vh;
+}
+.contianer-slider {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  height: 100vh;
+}
+.slides {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.images {
+  border-radius: 20px;
+  width: inherit;
+  height: inherit;
+}
+.slides-hidden {
+  display: none;
+}
+.arrow {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+}
+.arrow-right {
+  right: 1rem;
+}
+.arrow-left {
+  left: 1rem;
+}
+.indecators {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+.indecator {
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 1rem;
+  width: 1rem;
+  outline: none;
+  border: none;
+  margin: 0px 10px 0px 10px;
+}
+.inactive {
+  background-color: rgb(119, 118, 118);
+}
+.active {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.rose {
+  position: absolute;
+  bottom: 1rem;
+  filter: drop-shadow(5px 5px 10px #000000);
+}
+.response-container {
+  width: 50%;
+  height: 50vh;
+  background-color: #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container-response {
+  position: absolute;
+  top: 10px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
