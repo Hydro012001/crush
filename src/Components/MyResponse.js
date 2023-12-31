@@ -14,6 +14,7 @@ function MyResponse({ agree, handleClose }) {
       }).then((res) => {
         navigate("/slider");
       });
+      alert("I have accept you response. Thank you");
       navigate("/slider");
     } catch (error) {
       console.log(error);
