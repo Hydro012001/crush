@@ -42,7 +42,7 @@ function MyResponse({ agree, handleClose }) {
         <div class="form-floating ">
           <textarea
             class="form-control"
-            placeholder="Leave a comment here"
+            placeholder="Leave a response here"
             id="floatingTextarea2"
             style={{ height: "100px", width: "30rem" }}
             onChange={(e) => setResponse(e.target.value)}
