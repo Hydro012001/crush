@@ -50,9 +50,9 @@ function Home(props) {
     const currentDate = new Date();
     const newYearDate = new Date("January 1, 2024");
     if (currentDate.getTime() >= newYearDate.getTime()) {
-      alert("Dili pa pwd lagi...");
-    } else {
       navigate("slider");
+    } else {
+      alert("Dili pa pwd lagi...");
     }
   };
   return (
