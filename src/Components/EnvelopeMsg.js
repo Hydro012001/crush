@@ -54,7 +54,9 @@ function EnvelopeMsg() {
                       katabi. I hope one day we can be official. But before na
                       mahitabo dapat graduate nata. I hope that dili ka mangita
                       ug lain, but naa man gani sultie lang ko daan haha. Pili
-                      lang sa ubos if you choose other or not.
+                      lang sa ubos if you choose other or not. That's all Rose
+                      thank you for being part of my 2023 bisan bag-o pata
+                      nagka-close.<strong> THANK YOU SO MUCH</strong>.
                     </p>
                     <div className="btn-containers">
                       <button
