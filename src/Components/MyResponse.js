@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "../App.css";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "./Firebase";
+import { useNavigate } from "react-router-dom";
 function MyResponse({ agree, handleClose }) {
   const [response, setResponse] = useState("");
-
+  const navigate = useNavigate();
   const handleSubmitResponse = async () => {
     console.log(agree);
     try {
@@ -12,7 +13,7 @@ function MyResponse({ agree, handleClose }) {
         message: response,
         agree: agree,
       }).then((res) => {
-        window.location.reload();
+        navigate("/letter");
       });
     } catch (error) {
       console.log(error);
