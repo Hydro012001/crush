@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import image1 from "../image/1.jpeg";
 
 import image4 from "../image/4.jpeg";
@@ -15,10 +15,17 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
+import ToastMsg from "./ToastMsg";
 
 function SliderImages(props) {
   const [slides, setSlides] = useState(0);
+  const [showToast, setShowToast] = useState(true);
   const navigate = useNavigate();
+  useEffect(() => {
+    setInterval(() => {
+      setShowToast(false);
+    }, 2000);
+  }, []);
   const data = [
     {
       caption: "Hello testing",
@@ -58,6 +65,7 @@ function SliderImages(props) {
   const handlePrevSlide = () => {
     setSlides(slides === 0 ? data.length - 1 : slides - 1);
   };
+
   return (
     <div className="contianer-slider">
       <FontAwesomeIcon
@@ -112,6 +120,7 @@ function SliderImages(props) {
           ></button>
         ))}
       </span>
+      {showToast ? <ToastMsg message={"Please view the each image"} /> : ""}
     </div>
   );
 }

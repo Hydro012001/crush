@@ -236,4 +236,10 @@
   border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
   resize: none;
+  width: 80%;
+  height: 100px;
+}
+.uploading {
+  font-size: 20px;
+  color: white;
 }

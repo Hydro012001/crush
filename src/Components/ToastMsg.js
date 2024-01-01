@@ -1,7 +1,7 @@
 import React from "react";
 
-function ToastMsg() {
-  return <div className="toastmsg">Please Hover Over the Images</div>;
+function ToastMsg({ message }) {
+  return <div className="toastmsg">{message}</div>;
 }
 
 export default ToastMsg;

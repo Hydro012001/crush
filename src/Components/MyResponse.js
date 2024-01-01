@@ -6,7 +6,9 @@ import { useNavigate } from "react-router-dom";
 function MyResponse({ agree, handleClose }) {
   const [response, setResponse] = useState("");
   const navigate = useNavigate();
+  const [showLoader, setShowLoader] = useState(false);
   const handleSubmitResponse = async () => {
+    setShowLoader(true);
     try {
       await addDoc(collection(db, "response"), {
         message: response,
@@ -14,6 +16,7 @@ function MyResponse({ agree, handleClose }) {
       }).then((res) => {
         navigate("/slider");
       });
+      setShowLoader(false);
       alert("I have accept you response. Thank you");
       navigate("/slider");
     } catch (error) {
@@ -27,36 +30,42 @@ function MyResponse({ agree, handleClose }) {
   return (
     <div className="container-response">
       <div className="response-container">
-        <p className="notes">
-          Can you give me your honest response? <br />
-          Why did you choose{" "}
-          {agree === "Agree" ? (
-            <label className="agree-ans">
+        {showLoader ? (
+          <p className="uploading">
+            Your Response is Being Save..... <br />
+            Please Be Patient....
+          </p>
+        ) : (
+          <>
+            <p className="notes">
+              Can you give me your honest response? <br />
+              Why did you choose{" "}
+              {agree === "Agree" ? (
+                <label className="agree-ans">
+                  {" "}
+                  me instead of choosing the others ?
+                </label>
+              ) : (
+                <label className="not-ans">not choose me ?</label>
+              )}
+            </p>
+            <textarea
+              class="form-control"
+              placeholder="Leave a response here"
+              id="floatingTextarea2"
+              onChange={(e) => setResponse(e.target.value)}
+            ></textarea>
+            <div className="btns-container">
               {" "}
-              me instead of choosing the others ?
-            </label>
-          ) : (
-            <label className="not-ans">not choose me ?</label>
-          )}
-        </p>
-        <div class="form-floating ">
-          <textarea
-            class="form-control"
-            placeholder="Leave a response here"
-            id="floatingTextarea2"
-            style={{ height: "100px", width: "30rem" }}
-            onChange={(e) => setResponse(e.target.value)}
-          ></textarea>
-        </div>
-        <div className="btns-container">
-          {" "}
-          <button className="btns only" onClick={handleSubmitResponse}>
-            Submit
-          </button>
-          <button className="btns other" onClick={handleHide}>
-            Close
-          </button>
-        </div>
+              <button className="btns only" onClick={handleSubmitResponse}>
+                Submit
+              </button>
+              <button className="btns other" onClick={handleHide}>
+                Close
+              </button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
