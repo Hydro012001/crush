@@ -58,7 +58,7 @@
   border-left: 450px solid var(--envelope-cover);
 }
 p {
-  font-size: 12px;
+  font-size: 11px;
   text-align: center;
 }
 .envelope > .letter {
@@ -71,7 +71,7 @@ p {
   text-align: center;
   transition: all 1s ease-in-out;
   box-shadow: 0 0 5px var(--shadow-color);
-  padding: 20px 10px;
+  padding: 10px 10px;
 }
 .heart {
   position: absolute;
@@ -106,7 +106,7 @@ p {
   z-index: 0;
 }
 .flap > .envelope > .letter {
-  bottom: 290px;
+  bottom: 315px;
   transform: scale(1.5);
   transition-delay: 1s;
 }

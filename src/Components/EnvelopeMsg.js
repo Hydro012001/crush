@@ -53,18 +53,20 @@ function EnvelopeMsg() {
                     <p>
                       <strong> Happy New Year</strong>, I pray that this year
                       will be your years of fulfilment. I hope you will achieve
-                      you dreams in life. And I hope that one day u be
+                      your dreams in life. And I hope that one day u will be
                       comfortable to share your problems with anyone or to me
                       lang. I hope this year and coming years I would be glad
                       nga mahi-apil ko. I want you to know that seryoso ko nimo
                       and unta dili ka mapul-an kay usahay ky boring kay ko
                       katabi. I hope one day we can be official. But before na
                       mahitabo dapat graduate nata. I hope that dili ka mangita
-                      ug lain, but naa man gani sultie lang ko daan haha. Pili
-                      lang sa ubos if you choose other or not. That's all Rose
-                      thank you for being part of my 2023 bisan bag-o pata
-                      nagka-close. I pray that on the years nga mo agi is part
-                      lang gihapon ka sa akong kinabuhi.
+                      ug lain, but naa man gani sultie lang ko daan haha. If naa
+                      man gani please allow me to break all the promise that I
+                      made. But if wala I will make those promise come true with
+                      you. Pili lang sa ubos if you choose other or not. That's
+                      all Rose thank you for being part of my 2023 bisan bag-o
+                      pata nagka-close. I pray that on the years nga mo agi is
+                      part lang gihapon ka sa akong kinabuhi.
                       <strong> THANK YOU SO MUCH</strong>.
                     </p>
                     <div className="btn-containers">
