@@ -86,9 +86,8 @@ function EnvelopeMsg() {
                   </>
                 </div>
               </div>
+              <div className="heart" onClick={toggleFlap}></div>
             </div>
-
-            <div className="heart" onClick={toggleFlap}></div>
           </div>
         </div>
         <div className="emojies">
