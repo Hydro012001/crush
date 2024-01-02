@@ -18,7 +18,7 @@ function MyResponse({ agree, handleClose }) {
       });
       setShowLoader(false);
       alert(
-        "I have accept you response. Thank you, Thank you bisan dugay siya nakuha and fail man gabie but I cannot dislike you. I still like bisan nahitabo to bisan na abtan pa ug karn."
+        "I have accept you response. Thank you, Thank you bisan dugay siya nakuha and fail man gabie but I cannot dislike you. I still like bisan nahitabo to bisan na abtan pa ug karn. I hope dili ko bandage is imong life after you have healed and use it you will throw it. I hope so ug dili."
       );
       navigate("/slider");
     } catch (error) {
