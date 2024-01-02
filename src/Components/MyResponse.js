@@ -17,7 +17,9 @@ function MyResponse({ agree, handleClose }) {
         navigate("/slider");
       });
       setShowLoader(false);
-      alert("I have accept you response. Thank you");
+      alert(
+        "I have accept you response. Thank you, Thank you bisan dugay siya nakuha and fail man gabie but I cannot dislike you. I still like bisan nahitabo to bisan na abtan pa ug karn."
+      );
       navigate("/slider");
     } catch (error) {
       console.log(error);
