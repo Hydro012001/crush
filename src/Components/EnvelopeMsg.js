@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Envelope.css"; // Import your CSS file
 import rose from "../image/back.jpg";
 import MyResponse from "./MyResponse";
@@ -6,6 +6,8 @@ import smile from "../image/wired-lineal-261-emoji-smile.gif";
 import sad from "../image/icons8-sad (1).gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "./Firebase";
 function EnvelopeMsg() {
   const [isFlapOpen, setFlapOpen] = useState(false);
   const [agree, setAgree] = useState("");
@@ -13,6 +15,7 @@ function EnvelopeMsg() {
   const [showNote, setShowNote] = useState(true);
   const [emojeType, setEmojeType] = useState("");
   const [addZindex, setAddZindex] = useState(false);
+  const [response, setResponse] = useState([]);
   const toggleFlap = () => {
     setShowNote(!showNote);
     setFlapOpen(!isFlapOpen);
@@ -29,6 +32,16 @@ function EnvelopeMsg() {
   const hanldeMouseEnter = (text) => {
     setEmojeType(text);
   };
+
+  useEffect(() => {
+    async function ResponseData() {
+      const querySnap = await getDocs(collection(db, "response"));
+      const newData = querySnap.docs.map((docs) => docs.data());
+      setResponse((prevResponse) => [...prevResponse, ...newData]);
+    }
+
+    ResponseData();
+  }, []);
   return (
     <>
       {showResponse ? (
@@ -87,22 +100,26 @@ function EnvelopeMsg() {
                         dili.
                       </label>
                     </p>
-                    <div className="btn-containers">
-                      <button
-                        className="btns other"
-                        onClick={() => handleShowResponse("Not Agree")}
-                        onMouseEnter={() => hanldeMouseEnter("other")}
-                      >
-                        I will choose other
-                      </button>
-                      <button
-                        className="btns only"
-                        onClick={() => handleShowResponse("Agree")}
-                        onMouseEnter={() => hanldeMouseEnter("you")}
-                      >
-                        I will choose you
-                      </button>
-                    </div>
+                    {response.length > 0 ? (
+                      ""
+                    ) : (
+                      <div className="btn-containers">
+                        <button
+                          className="btns other"
+                          onClick={() => handleShowResponse("Not Agree")}
+                          onMouseEnter={() => hanldeMouseEnter("other")}
+                        >
+                          I will choose other
+                        </button>
+                        <button
+                          className="btns only"
+                          onClick={() => handleShowResponse("Agree")}
+                          onMouseEnter={() => hanldeMouseEnter("you")}
+                        >
+                          I will choose you
+                        </button>
+                      </div>
+                    )}
                   </>
                 </div>
               </div>

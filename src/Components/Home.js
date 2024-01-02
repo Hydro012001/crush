@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 // import { db } from "./Firebase";
 function Home(props) {
   const navigate = useNavigate();
-  //  const [response, setResponse] = useState([]);
+
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const [showToast, setShowToast] = useState(true);
   const [showMessae, setShowMessage] = useState(false);
