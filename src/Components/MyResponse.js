@@ -40,7 +40,8 @@ function MyResponse({ agree, handleClose }) {
         ) : (
           <>
             <p className="notes">
-              Can you give me your honest response? <br />
+              Can you give me your honest response from the letter and based sa
+              imong gi pili nga button ? <br />
               Why did you choose{" "}
               {agree === "Agree" ? (
                 <label className="agree-ans">
@@ -53,7 +54,7 @@ function MyResponse({ agree, handleClose }) {
             </p>
             <textarea
               class="form-control"
-              placeholder="Leave a response here"
+              placeholder="Leave a response here "
               id="floatingTextarea2"
               onChange={(e) => setResponse(e.target.value)}
             ></textarea>

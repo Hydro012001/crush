@@ -4,15 +4,19 @@ import rose from "../image/back.jpg";
 import MyResponse from "./MyResponse";
 import smile from "../image/wired-lineal-261-emoji-smile.gif";
 import sad from "../image/icons8-sad (1).gif";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 function EnvelopeMsg() {
   const [isFlapOpen, setFlapOpen] = useState(false);
   const [agree, setAgree] = useState("");
   const [showResponse, setShowResponse] = useState(false);
   const [showNote, setShowNote] = useState(true);
   const [emojeType, setEmojeType] = useState("");
+  const [addZindex, setAddZindex] = useState(false);
   const toggleFlap = () => {
     setShowNote(!showNote);
     setFlapOpen(!isFlapOpen);
+    setAddZindex(!addZindex);
   };
   const handleShowResponse = (agree) => {
     setAgree(agree);
@@ -43,12 +47,21 @@ function EnvelopeMsg() {
         <div className={`container `}>
           <div className={`envelope-wrapper ${isFlapOpen ? "flap" : ""}`}>
             <div className={`envelope`}>
-              <div className="letter">
+              <div
+                className={`letter`}
+                style={{ zIndex: `${addZindex ? "4" : "0"}` }}
+              >
                 <div className="text">
                   <div className="header">
                     <strong>Dear Rose Marie Goc-ong, </strong>
                     <img src={rose} alt="rose" className="picture" />
+                    <FontAwesomeIcon
+                      icon={faCircleXmark}
+                      className="close"
+                      onClick={toggleFlap}
+                    />
                   </div>
+
                   <>
                     <p>
                       <strong> Happy New Year</strong>, I pray that this year
@@ -63,11 +76,15 @@ function EnvelopeMsg() {
                       ug lain, but naa man gani sultie lang ko daan haha. If naa
                       man gani please allow me to break all the promise that I
                       made. But if wala I will make those promise come true with
-                      you. Pili lang sa ubos if you choose other or not. That's
-                      all Rose thank you for being part of my 2023 bisan bag-o
-                      pata nagka-close. I pray that on the years nga mo agi is
-                      part lang gihapon ka sa akong kinabuhi.
+                      you. That's all Rose thank you for being part of my 2023
+                      bisan bag-o pata nagka-close. I pray that on the years nga
+                      mo agi is part lang gihapon ka sa akong kinabuhi.
                       <strong> THANK YOU SO MUCH</strong>.
+                      <br />
+                      <label className="choosebuttontext">
+                        Kaning button sa ubos to know if you will choose me or
+                        dili.
+                      </label>
                     </p>
                     <div className="btn-containers">
                       <button

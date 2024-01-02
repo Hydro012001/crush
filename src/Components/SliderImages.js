@@ -86,8 +86,6 @@ function SliderImages(props) {
             <img src={rose} alt="rose" className="gif rose" />
             <img src={rose} alt="rose" className="gif rose" />
             <img src={rose} alt="rose" className="gif rose" />
-            <img src={rose} alt="rose" className="gif rose" />
-            <img src={rose} alt="rose" className="gif rose" />
           </div>
           {index === data.length - 1 ? (
             <button

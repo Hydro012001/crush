@@ -19,10 +19,9 @@
   flex-direction: column;
 }
 .container {
-  margin-top: 20vh;
   height: 100vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   margin-bottom: 10px;
 }
@@ -33,14 +32,14 @@
 .envelope-wrapper > .envelope {
   position: relative;
   width: 900px;
-  height: 360px;
+  height: 300px;
 }
 .envelope-wrapper > .envelope::before {
   content: "";
   position: absolute;
   top: 0;
   z-index: 2;
-  border-top: 180px solid var(--envelope-tab);
+  border-top: 150px solid var(--envelope-tab);
   border-right: 450px solid transparent;
   border-left: 450px solid transparent;
   transform-origin: top;
@@ -52,9 +51,9 @@
   z-index: 2;
   width: 0px;
   height: 0px;
-  border-top: 180px solid transparent;
+  border-top: 150px solid transparent;
   border-right: 450px solid var(--envelope-cover);
-  border-bottom: 180px solid var(--envelope-cover);
+  border-bottom: 150px solid var(--envelope-cover);
   border-left: 450px solid var(--envelope-cover);
 }
 p {
@@ -66,12 +65,21 @@ p {
   right: 20%;
   bottom: 0;
   width: 54%;
-  height: 85%;
+  height: 80%;
   background: var(--primary);
   text-align: center;
   transition: all 1s ease-in-out;
   box-shadow: 0 0 5px var(--shadow-color);
   padding: 10px 10px;
+}
+.close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: red;
+  box-shadow: 0 0 5px var(--shadow-color);
+  border-radius: 50%;
+  cursor: pointer;
 }
 .heart {
   position: absolute;
@@ -80,7 +88,7 @@ p {
   width: 15px;
   height: 15px;
   background: var(--heart-color);
-  z-index: 4;
+  z-index: 3;
   transform: translate(-50%, -20%) rotate(45deg);
   transition: transform 0.5s ease-in-out 1s;
   box-shadow: 0 1px 6px var(--shadow-color);
@@ -106,9 +114,10 @@ p {
   z-index: 0;
 }
 .flap > .envelope > .letter {
-  bottom: 315px;
+  bottom: 100px;
+
   transform: scale(1.5);
-  transition-delay: 1s;
+  transition-delay: 1s, 1s;
 }
 .flap > .heart {
   transform: rotate(90deg);
@@ -172,7 +181,11 @@ p {
   top: 100px;
 }
 .instruction h2 {
+  text-align: center;
   color: white;
+}
+.choosebuttontext {
+  color: red;
 }
 .emojies {
   position: absolute;
@@ -183,4 +196,53 @@ p {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    margin: 0px;
+  }
+  .envelope-wrapper > .envelope {
+    position: relative;
+    width: 80vw;
+    height: 300px;
+  }
+  .envelope-wrapper > .envelope::before {
+    border-right: 40vw solid transparent;
+    border-left: 40vw solid transparent;
+    border-top: 150px solid var(--envelope-tab);
+  }
+
+  .envelope-wrapper > .envelope::after {
+    border-right: 40vw solid var(--envelope-cover);
+
+    border-left: 40vw solid var(--envelope-cover);
+    border-bottom: 150px solid var(--envelope-cover);
+    border-top: 150px solid transparent;
+  }
+  .envelope > .letter {
+    position: absolute;
+    height: 80%;
+    overflow-x: auto;
+  }
+  .btn-containers {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .btns {
+    height: 2rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  .close {
+    top: 2px;
+    right: 2px;
+  }
 }

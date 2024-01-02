@@ -61,7 +61,9 @@
   background-image: url("./image/bottom.jpg");
   background-size: contain;
 }
-
+body {
+  background-color: #000000;
+}
 .toastmsg {
   background-color: #fff;
 
@@ -109,23 +111,9 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  background-color: black;
+
+  width: 100%;
   height: 100vh;
-}
-.slides {
-  width: inherit;
-  height: inherit;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.images {
-  border-radius: 20px;
-  width: inherit;
-  height: inherit;
-}
-.slides-hidden {
-  display: none;
 }
 .arrow {
   position: absolute;
@@ -135,13 +123,31 @@
   border-radius: 50%;
   padding: 1rem;
   cursor: pointer;
+  z-index: 1;
 }
 .arrow-right {
-  right: 1rem;
+  right: 3%;
 }
 .arrow-left {
-  left: 1rem;
+  left: 3%;
 }
+.slides {
+  width: 30%;
+  height: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.images {
+  border-radius: 10px;
+  width: 100%;
+  height: 35rem;
+}
+.slides-hidden {
+  display: none;
+}
+
 .indecators {
   position: absolute;
   bottom: 1rem;
@@ -167,7 +173,8 @@
 }
 
 .response-container {
-  width: 50%;
+  width: 90%;
+  padding: 1rem;
   height: 50vh;
   background-color: #3498db;
   display: flex;
@@ -189,8 +196,8 @@
   justify-content: center;
 }
 .reveal-gift {
-  width: 20rem;
-  height: 2.5rem;
+  padding: 1rem;
+
   border-radius: 1rem;
   border: none;
   outline: none;
@@ -211,6 +218,7 @@
   justify-content: space-evenly;
   position: absolute;
   bottom: 1rem;
+  width: inherit;
 }
 
 .rose {
@@ -242,4 +250,14 @@
 .uploading {
   font-size: 20px;
   color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .slides {
+    width: 100%;
+    height: 100vh;
+  }
+  .images {
+    height: 90vh;
+  }
 }
