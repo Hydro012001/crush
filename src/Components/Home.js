@@ -66,10 +66,10 @@ function Home(props) {
     const endDate = new Date("January 2, 2024");
     if (
       currentDate.getTime() >= newYearDate.getTime() &&
-      currentDate.getTime() < endDate.getTime()
+      currentDate.getTime() <= endDate.getTime()
     ) {
       navigate("slider");
-    } else if (currentDate.getTime() > endDate.getTime()) {
+    } else if (currentDate.getTime() >= endDate.getTime()) {
       if (response.length > 0) {
         navigate("slider");
       } else {
