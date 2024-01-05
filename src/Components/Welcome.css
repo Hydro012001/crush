@@ -46,6 +46,8 @@
 }
 .form-welcome h1 {
   color: var(--bg-color);
+  text-align: center;
+  width: 100%;
 }
 
 .form-welcome > button:hover {
