@@ -91,7 +91,7 @@ function SliderImages(props) {
             <button
               className="reveal-gift"
               onClick={() => {
-                navigate("/letter");
+                navigate("/crush/letter");
               }}
             >
               {" "}
@@ -114,11 +114,13 @@ function SliderImages(props) {
           <button
             key={index}
             onClick={() => setSlides(index)}
-            className={`indecator ${slides === index ? "active" : "inactive"}`}
+            className={`indecator ${
+              slides === index ? "activeInde" : "inactive"
+            }`}
           ></button>
         ))}
       </span>
-      {showToast ? <ToastMsg message={"Please view the each image"} /> : ""}
+      {showToast ? <ToastMsg message={"Please view  each image"} /> : ""}
     </div>
   );
 }

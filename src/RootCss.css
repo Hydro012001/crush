@@ -1,0 +1,12 @@
+:root {
+  --primary: #c87449;
+  --bg-color: #fcf9f7;
+  --bg-envelope-color: #f5edd1;
+  --envelope-tab: #ecdeb8;
+  --envelope-cover: #e6cfa7;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --txt-color: #100a06;
+  --heart-color: rgb(252, 8, 231);
+  --secondary: #e4b198;
+  --accent: #da895f;
+}

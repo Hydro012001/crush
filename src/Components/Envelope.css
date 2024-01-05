@@ -8,6 +8,12 @@
   --txt-color: #444;
   --heart-color: rgb(252, 8, 231);
 }
+
+/* --text: #100a06;
+--background: #fcf9f7;
+--primary: #c87449;
+--secondary: #e4b198;
+--accent: #da895f; */
 .body-envelope {
   margin: 0;
   padding: 0;
@@ -66,8 +72,9 @@ p {
   bottom: 0;
   width: 54%;
   height: 82%;
-  background: var(--primary);
+  background: var(--bg-color);
   text-align: center;
+  line-height: 1.5;
   transition: all 1s ease-in-out;
   box-shadow: 0 0 5px var(--shadow-color);
   padding: 10px 10px;
@@ -114,7 +121,7 @@ p {
   z-index: 0;
 }
 .flap > .envelope > .letter {
-  bottom: 100px;
+  bottom: 50px;
 
   transform: scale(1.5);
   transition-delay: 1s, 1s;
@@ -182,7 +189,7 @@ p {
 }
 .instruction h2 {
   text-align: center;
-  color: white;
+  color: var(--primary);
 }
 .choosebuttontext {
   color: red;

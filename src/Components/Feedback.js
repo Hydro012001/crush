@@ -4,17 +4,14 @@ function Feedback({ handleShowMessage }) {
   return (
     <div className="message">
       <h2>Hi Crush,</h2>
-      <p>I want to show this simple cube picture for you.</p>
-      <p>I never thought nga maka tell ko nmo sa akong feelings.</p>
-      <p>And I never expect usab nga naa pd diay kay crush naku.</p>
-      <p>Thank you so much.</p>
-      <p>Keep being pretty. </p>
-      <p>You're admirer.</p>
-      <button
-        type="button"
-        class="btn btn-primary"
-        onClick={() => handleShowMessage()}
-      >
+      <p>
+        I want to show this simple cube picture for you. I never thought nga
+        maka tell ko nmo sa akong feelings. And I never expect usab nga naa pd
+        diay kay crush naku. Thank you so much. Keep being pretty. You're
+        admirer.
+      </p>
+
+      <button type="button" class="btnShow" onClick={() => handleShowMessage()}>
         Close
       </button>
     </div>
