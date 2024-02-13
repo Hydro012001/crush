@@ -68,6 +68,7 @@ function Navigation(props) {
             <FontAwesomeIcon icon={faCaretDown} className="caret" />
           </button>
           <div className="dropdown-content">
+            <Link to="valentine">Valentines</Link>
             <Link to="firstgift">First Gift</Link>{" "}
             <Link to="slider">New Year's Gift</Link>{" "}
             <Link to="photos">Photos</Link>

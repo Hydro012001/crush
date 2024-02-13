@@ -135,7 +135,7 @@ nav > .menu-icon {
   font-size: 16px;
   border: none;
   outline: none;
-  color: white;
+  color: var(--txt-color);
   padding: 1rem;
   background-color: inherit;
   font-family: inherit;
@@ -165,6 +165,7 @@ nav > .menu-icon {
   background-color: var(--bg-color);
   color: var(--txt-color);
   font-weight: 500;
+  cursor: pointer;
 }
 
 .dropdown-content a:hover {

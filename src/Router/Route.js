@@ -10,6 +10,7 @@ import GFandBF from "../GFandBF/GFandBF";
 import Couple from "../Couple/Couple";
 import Home from "../Components/Home";
 import Photos from "../Photos/Photos";
+import Valentines from "../Components/Valentines";
 
 function RoutesParams(props) {
   return (
@@ -18,6 +19,7 @@ function RoutesParams(props) {
       <Route path="/crush" element={<Navigation />}>
         <Route path="home" element={<Home />} />
         <Route path="firstgift" element={<FirstGfit />} />
+        <Route path="valentine" element={<Valentines />} />
         <Route path="slider" element={<SliderImages />} />
         <Route path="letter" element={<EnvelopeMsg />} />
         <Route path="gfandbf" element={<GFandBF />} />
