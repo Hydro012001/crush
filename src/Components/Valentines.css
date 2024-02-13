@@ -256,13 +256,13 @@
   right: 3rem;
 }
 .picture-container:nth-child(3) {
-  bottom: 5rem;
+  top: 20rem;
   animation: bottomImage1 ease-in 2s 1s,
     imagesRotate infinite ease-in 3s alternate-reverse;
   right: 10rem;
 }
 .picture-container:nth-child(4) {
-  bottom: 5rem;
+  top: 20rem;
   animation: bottomImage1 ease-in 2s 1s,
     imagesRotate infinite ease-in 3s alternate;
 
@@ -325,10 +325,10 @@
 }
 @keyframes bottomImage1 {
   from {
-    bottom: 0rem;
+    top: 25rem;
   }
   to {
-    bottom: 7rem;
+    top: 20rem;
   }
 }
 @keyframes imagesRotate {
