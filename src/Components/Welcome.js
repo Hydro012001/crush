@@ -20,7 +20,7 @@ function Welcome(props) {
       <div className="form-welcome">
         <h1>Explore Our Path Together</h1>
         <input
-          type="text"
+          type="password"
           placeholder="Enter the secret key"
           onChange={(e) => setSecretKey(e.target.value)}
         />
